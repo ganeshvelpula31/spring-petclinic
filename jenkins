@@ -1,0 +1,9 @@
+node {
+
+    stage('git url') {
+       git branch: 'main', url: 'https://github.com/ganeshvelpula31/spring-petclinic.git'
+    }
+    stage('build') {
+       sh 'mvn package'
+    }
+}
